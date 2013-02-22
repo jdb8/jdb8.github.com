@@ -821,7 +821,7 @@ body {
       font-size: 30px; }
     /* line 87, ../sass/_custom.scss */
     body .main .social-icons {
-      margin-top: 50px; }
+      margin: 50px 0; }
 
 /* ==========================================================================
    Media Queries

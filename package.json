@@ -1,0 +1,16 @@
+{
+  "name": "jdb8.github.com",
+  "version": "0.0.1",
+  "description": "My personal site",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jdb8/jdb8.github.com.git"
+  },
+  "author": "Joe Bateson",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "^0.9.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-uncss": "^0.3.4"
+  }
+}

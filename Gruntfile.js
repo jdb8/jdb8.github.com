@@ -12,6 +12,9 @@ module.exports = function(grunt) {
     },
     uncss: {
       dist: {
+        options: {
+          ignoreSheets : [/fonts.googleapis/]
+        },
         files: {
           'css/main.css': ['index.html']
         }

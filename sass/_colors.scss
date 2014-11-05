@@ -1,0 +1,12 @@
+// Current theme: behave (https://github.com/fnky/behave-theme)
+
+$background-color: #2c333d;
+$text-color: #d2d8e1;
+$comment-color: #808691;
+$link-color: #f0d879; // Class, Support
+$tag-color: #5ab8e5; // Keyword, Storage
+$keyword-color: #7dcbc4; // Operator, Misc
+$value-color: #ec9076; // String, Symbols, Inherited Class, Markup Heading
+
+// #434D5B in rgba, to account for http://stackoverflow.com/a/7224621
+$selection-color: rgba(67, 77, 91, .99);

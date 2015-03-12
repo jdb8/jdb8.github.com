@@ -1,20 +1,20 @@
 module.exports = function(grunt) {
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
-    compass: {
+    sass: {
+      options: {
+        sourceMap: true
+      },
       dist: {
-        options: {
-          config: 'config.rb',
-          force: true
+        files: {
+          'css/main.css': 'sass/main.scss'
         }
       }
     },
     uncss: {
       dist: {
-        options: {
-          ignoreSheets : [/fonts.googleapis/]
-        },
         files: {
           'css/main.css': ['index.html']
         }
@@ -23,18 +23,17 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-          'css/main.css': ['css/main.css']
+          'css/main.min.css': ['css/main.css'],
         }
       }
-    }
+    },
+    watch: {
+      files: ['sass/*.scss'],
+      tasks: ['sass', 'cssmin'],
+    },
   });
 
-  // Load plugins
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-uncss');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-
   // Default task(s).
-  grunt.registerTask('default', ['compass', 'uncss', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'uncss', 'cssmin']);
 
 };

@@ -21,6 +21,9 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
+      options: {
+        keepSpecialComments: 0,
+      },
       combine: {
         files: {
           'css/main.min.css': ['css/main.css'],
